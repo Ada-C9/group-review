@@ -8,12 +8,12 @@ snowboards = [
   { name: "Waverunner", color: "red", size: :L, price: 75.00 }
 ]
 
-snowboard_colors = snowboards.map do |s|
-  s[:color]
+weekly_prices = snowboards.map do |s|
+  "#{s[:name]} - #{s[:price] * 7}"
 end
 
-puts "Snowboard colors: "
-puts snowboard_colors
+puts "Weekly rental prices: "
+puts weekly_prices
 
 # - reduce
 # - filter / select
