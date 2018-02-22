@@ -8,10 +8,11 @@ snowboards = [
   { name: "Waverunner", color: "red", size: :L, price: 75.00 }
 ]
 
+snowboard_prices = snowboards.map do |s|
+  s[:price] * 7
+end
 
-
-max_snowboard_price = snowboards.reduce(-1) do |max_price, snowboard|
-  price = snowboard[:price]
+max_snowboard_price = snowboard_prices.reduce(-1) do |max_price, price|
   if price > max_price
     max_price = price
   end
