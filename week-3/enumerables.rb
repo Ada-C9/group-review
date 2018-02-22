@@ -8,13 +8,18 @@ snowboards = [
   { name: "Waverunner", color: "red", size: :L, price: 75.00 }
 ]
 
-weekly_prices = snowboards.map do |s|
-  "#{s[:name]} - #{s[:price] * 7}"
+[1,2,3,4].reduce(1000) do |sum, n|
+  puts "Accumulator: #{sum}"
+  puts "Array element: #{n}"
+  sum + n
 end
 
-puts "Weekly rental prices: "
-puts weekly_prices
-
 # - reduce
+# Reduce is many-to-one enumerable methods
+# Examples:
+#  - searching / contains
+#  - sum / other basic arithmetic
+#  - max_by / min_by
+
 # - filter / select
 # - all? / any?
