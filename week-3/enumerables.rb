@@ -8,12 +8,18 @@ snowboards = [
   { name: "Waverunner", color: "red", size: :L, price: 75.00 }
 ]
 
-[1,2,3,4].reduce(1000) do |sum, n|
-  puts "Accumulator: #{sum}"
-  puts "Array element: #{n}"
-  sum + n
+
+
+max_snowboard_price = snowboards.reduce(-1) do |max_price, snowboard|
+  price = snowboard[:price]
+  if price > max_price
+    max_price = price
+  end
+
+  max_price
 end
 
+puts max_snowboard_price
 # - reduce
 # Reduce is many-to-one enumerable methods
 # Examples:
