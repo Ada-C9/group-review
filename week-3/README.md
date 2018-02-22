@@ -7,3 +7,6 @@ Topics:
 * TDD & Object-oriented principles from last week
 
 Additional questions:
+1. Enumerables documentation on Ruby Docs (inject / reduce)
+2. group_by on array of hashes
+3. Git conflicts

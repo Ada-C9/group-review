@@ -13,11 +13,11 @@ snowboard_prices = snowboards.map do |s|
 end
 
 max_snowboard_price = snowboard_prices.reduce(-1) do |max_price, price|
-  if price > max_price
-    max_price = price
+  if price > max_price && price != 75.00
+    price
+  else
+    max_price
   end
-
-  max_price
 end
 
 puts max_snowboard_price
