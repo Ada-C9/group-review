@@ -8,8 +8,13 @@ class Reservation
   end
 end
 
-def new_reservation(name, start_res, end_res)
-  reservation = Reservation.new(guest: name, start_date: start_res, end_date: end_res)
+def new_reservation(data)
+  reservation = Reservation.new(data)
 end
 
-new_reservation("Lisa", Date.today, Date.today + 4)
+reservation_data = {
+  guest: "Lisa",
+  start_date: Date.today,
+  end_date: Date.today + 4,
+}
+new_reservation(reservation_data)
