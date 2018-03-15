@@ -3,6 +3,8 @@
   border: 1px solid black;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  width: 550px;
+  margin: 0.5rem;
 }
 
 .salutation {
@@ -31,5 +33,6 @@
 }
 
 .cards {
-  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
 }
