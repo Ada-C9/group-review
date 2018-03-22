@@ -7,6 +7,15 @@ class CardsController < ApplicationController
       description: "The first programmer!"
     })
 
-    render plain: "Business Cards: #{card.name}"
+    output = <<~HEREDOC
+    Business Cards:
+      #{card.name}
+      #{card.job}
+
+      #{card.location}
+      #{card.description}
+    HEREDOC
+
+    render plain: output
   end
 end
