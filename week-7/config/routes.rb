@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # 3. to:
   # 4. controller#action
 
-  get '/cards', to: 'cards#index'
+  get('/cards', {to: 'cards#index', as: 'cards'})
+
+  #get('/cards', {controller: 'cards', action: 'index'})
 end
