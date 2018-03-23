@@ -7,5 +7,8 @@ Rails.application.routes.draw do
 
   get('/cards', {to: 'cards#index', as: 'cards'})
 
+  get('/cards/new', {to: 'cards#new', as: 'new_card'})
+  get('/cards/:id', {to: 'cards#show', as: 'card'})
+
   #get('/cards', {controller: 'cards', action: 'index'})
 end
