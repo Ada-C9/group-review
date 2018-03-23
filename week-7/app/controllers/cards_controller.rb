@@ -6,7 +6,5 @@ class CardsController < ApplicationController
       location: "England",
       description: "The first programmer!"
     })
-
-    render "index"
   end
 end
