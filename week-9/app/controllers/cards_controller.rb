@@ -24,4 +24,13 @@ class CardsController < ApplicationController
   def new
     render({plain: "NEW CARD FORM"})
   end
+
+  def favorite
+    card = Card.find(params[:id])
+    #card.update(favorite: true)
+    card.favorite = true
+    card.save
+
+    redirect_to :index
+  end
 end
