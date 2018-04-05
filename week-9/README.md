@@ -9,3 +9,7 @@ Topics:
 * Git - anything
 
 Additional questions:
+1. Routes - customized routes while using `resources`
+2. Model methods - using `self` inside of model methods
+3. Validation error messages - displaying to the user
+4. Nested routes usage for RideShare project
