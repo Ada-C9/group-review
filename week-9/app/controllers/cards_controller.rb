@@ -26,7 +26,7 @@ class CardsController < ApplicationController
   end
 
   def favorite
-    card = Card.find(params[:id])
+    card = Card.find(params[:card_id] || params[:id])
     #card.update(favorite: true)
     card.favorite = true
     card.save
