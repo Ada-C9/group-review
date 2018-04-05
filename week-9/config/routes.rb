@@ -15,5 +15,13 @@ Rails.application.routes.draw do
   end
 
 
+
+  resources :passengers do
+    resources :trips, only: [:create]
+  end
+
+  resources :trips, except: [:create]
+
+
   #get('/cards', {controller: 'cards', action: 'index'})
 end
