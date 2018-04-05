@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   # get('/cards/new', {to: 'cards#new', as: 'new_card'})
   # get('/cards/:id', {to: 'cards#show', as: 'card'})
 
-  resources(:cards, {:only => [:index, :new, :show]})
+  resources(:cards, {:only => [:index, :new, :show]}) do
+    post('favorite')
+  end
 
 
   #get('/cards', {controller: 'cards', action: 'index'})
