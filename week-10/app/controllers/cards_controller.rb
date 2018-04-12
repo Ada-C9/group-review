@@ -8,7 +8,6 @@ class CardsController < ApplicationController
       acquired_on: "1815-12-10"
     })
 
-    render({plain: params()})
   end
 
   def show

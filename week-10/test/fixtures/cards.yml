@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  job: MyString
-  location: MyString
-  details: MyText
-  acquired_on: 2018-03-22
+ada:
+  name: Ada Lovelace
+  job: Countess
+  location: England
+  details: The first programmer!
+  acquired_on: <%= Date.today %>
+  favorite: true
 
-two:
-  name: MyString
-  job: MyString
-  location: MyString
-  details: MyText
-  acquired_on: 2018-03-22
+charles:
+  name: Charles Ellis
+  job: Instructional Assistant
+  location: Seattle
+  details: NOT the first programmer
+  acquired_on: <%= Date.yesterday %>
+  favorite: false

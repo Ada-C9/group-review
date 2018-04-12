@@ -1,6 +1,7 @@
 # Group Review - Week 10 (4/11/2018)
 
 Repo: https://github.com/Ada-C9/group-review
+Branch: week-10/livecode
 
 Topics:
 * Rails testing - models & validations
