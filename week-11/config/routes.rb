@@ -22,6 +22,9 @@ Rails.application.routes.draw do
 
   resources :trips, except: [:create]
 
+  get '/session/add', to: 'session_testing#add_stuff'
+  get '/session', to: 'session_testing#show', as: 'session_show'
+
 
   #get('/cards', {controller: 'cards', action: 'index'})
 end
