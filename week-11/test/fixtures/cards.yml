@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ada:
+  name: Ada Lovelace
+  job: Countess
+  location: England
+  details: The first programmer!
+  acquired_on: <%= Date.today %>
+  favorite: true
+
+charles:
+  name: Charles Ellis
+  job: Instructional Assistant
+  location: Seattle
+  details: NOT the first programmer
+  acquired_on: <%= Date.yesterday %>
+  favorite: false
