@@ -1,22 +1,17 @@
-const array = [1, 2, 3];
+const array = [1];
 
-// array.forEach(function(n) {
-//   console.log(n * 10);
-// });
+const showThis = function() {
+  console.log("`this` from outer scope:");
+  console.log(this);
 
-const myEach = function(array, f) {
-  let i = 0;
-  while(i < array.length) {
-    f(array[i]);
-    i++;
-  }
+  array.forEach((n) => {
+    console.log("`this` from inner scope:");
+    console.log(this);
+  });
 };
 
-myEach(array, function(n) {
-  console.log(n * 100);
-  console.log(array.length);
-});
+const someValue = 3;
 
-myEach(array, function(n) {
-  console.log(n * n);
-});
+const boundFunc = showThis.bind(someValue);
+
+boundFunc();
