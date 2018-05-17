@@ -10,8 +10,10 @@ const showThis = function() {
   });
 };
 
-const someValue = 3;
+const someValue = {
+  name: "Charles"
+};
 
-const boundFunc = showThis.bind(someValue);
+someValue.aFunction = showThis;
 
-boundFunc();
+someValue.aFunction();
