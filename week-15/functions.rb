@@ -4,15 +4,10 @@ array = [1, 2, 3]
 #   puts n * 10
 # end
 
-def my_each(array)
-  i = 0
-  while i < array.length
-    value = array[i]
-
-    yield(value)
-
-    i += 1
-  end
+def my_each(array, &block)
+  puts "I'm in a cool method!"
+  array.each(&block)
+  puts "I'm finishing this cool method!"
 end
 
 my_each(array) do |n|
