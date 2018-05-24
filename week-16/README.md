@@ -6,7 +6,7 @@ Branch: week-16/livecode
 Topics:
 * jQuery and DOM manipulation
 * Closures and Callbacks
-* AJAX and Promises
+* AJAX (Asynchronous JavaScript And XML) and Promises
 * Any other JavaScript topics
 
 Additional questions:
