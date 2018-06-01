@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ShoppingList from './components/ShoppingList';
+import ItemForm from './components/ItemForm';
 
 class App extends Component {
   constructor() {
@@ -18,16 +19,39 @@ class App extends Component {
         { name: 'Poptarts', quantity: 2, unit: 'boxes' },
         { name: 'Clementines', quantity: 1, unit: 'bag' },
         { name: 'Chocolate Milk', quantity: 3, unit: 'cartons' }
-      ]
+      ],
+      selectedItem: 1
     };
   }
 
   render() {
+    let form = '';
+    if (this.state.selectedItem !== null) {
+      const item = this.state.shoppingList[this.state.selectedItem];
+
+      form = <ItemForm
+                item={item}
+                index={this.state.selectedItem}
+                updateCallback={this.onItemUpdate}
+             />;
+    }
+
     return (
       <div className="App">
         <ShoppingList list={this.state.shoppingList} />
+        {form}
       </div>
     );
+  }
+
+  onItemUpdate = (item, index) => {
+    let shoppingList = this.state.shoppingList;
+
+    shoppingList[index] = item;
+
+    this.setState({
+      shoppingList: shoppingList
+    });
   }
 }
 
