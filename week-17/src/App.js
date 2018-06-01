@@ -20,7 +20,7 @@ class App extends Component {
         { name: 'Clementines', quantity: 1, unit: 'bag' },
         { name: 'Chocolate Milk', quantity: 3, unit: 'cartons' }
       ],
-      selectedItem: 1
+      selectedItem: null
     };
   }
 
@@ -38,7 +38,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <ShoppingList list={this.state.shoppingList} />
+        <ShoppingList list={this.state.shoppingList} selectCallback={this.onItemSelect} />
         {form}
       </div>
     );
@@ -51,6 +51,12 @@ class App extends Component {
 
     this.setState({
       shoppingList: shoppingList
+    });
+  }
+
+  onItemSelect = (index) => {
+    this.setState({
+      selectedItem: index
     });
   }
 }
