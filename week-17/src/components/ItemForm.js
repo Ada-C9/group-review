@@ -8,6 +8,7 @@ class ItemForm extends Component {
       name: props.item.name,
       quantity: props.item.quantity,
       unit: props.item.unit,
+      index: props.index
     };
   }
 
@@ -20,6 +21,19 @@ class ItemForm extends Component {
         <input type='submit' value='Update Item' />
       </form>
     );
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.index !== state.index) {
+      return {
+        name: props.item.name,
+        quantity: props.item.quantity,
+        unit: props.item.unit,
+        index: props.index
+      };
+    }
+
+    return null;
   }
 
   onSubmit = (event) => {
